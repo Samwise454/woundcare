@@ -425,8 +425,9 @@ const Analyze = () => {
                         />
 
                         <input
-                        type="date"
-                        className="input input-bordered"
+                            type="date"
+                            className="input input-bordered"
+                            placeholder="Date"
                         />
 
                         <button className="btn btn-primary w-full">
