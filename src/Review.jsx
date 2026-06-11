@@ -17,7 +17,7 @@ const Review = () => {
 
   followUpDate: "18 June 2026",
 
-  clinician: "Dr. Sarah Johnson",
+  clinician: "Onyebodo Chiemezuo",
 
   woundImages: ["/woundImage.jfif"],
 

@@ -415,16 +415,18 @@ const Analyze = () => {
                         </select>
 
                         <textarea
-                        className="textarea textarea-bordered h-32"
+                        className="textarea textarea-bordered h-32 resize-none"
                         placeholder="Clinical findings..."
                         />
 
                         <textarea
-                        className="textarea textarea-bordered h-32"
+                        className="textarea textarea-bordered h-32 resize-none"
                         placeholder="Treatment recommendations..."
                         />
 
+                        <label htmlFor="date">Date:</label>
                         <input
+                            id="date"
                             type="date"
                             className="input input-bordered"
                             placeholder="Date"
