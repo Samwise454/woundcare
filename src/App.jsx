@@ -4,6 +4,8 @@
     import Nav from './component/Nav';
     import Home from './Home';
     import Footer from './component/Footer';
+    import Capture from './Capture';
+    import Analyze from './Analyze';
 
     function App() {
       return (
@@ -11,6 +13,8 @@
           <Route path="/nav" element={<Nav />} />
           <Route path="/" element={<Home />} />
           <Route path="/Footer" element={<Footer />} />
+          <Route path="/Capture" element={<Capture />} />
+          <Route path="/Analyze" element={<Analyze />} />
         </Routes>
       );
     }

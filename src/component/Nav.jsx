@@ -1,6 +1,10 @@
 import React, { useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCamera, faChartBar, faClipboardCheck } from '@fortawesome/free-solid-svg-icons';
 
 const Nav = () => {
+  const navigate = useNavigate(); 
   useEffect(() => {
     const favicon = document.getElementById("dynamicFavicon");
 
@@ -8,6 +12,11 @@ const Nav = () => {
       //fetch the school's favicon or logo
       favicon.href = '/shield.JPG';
     }
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // 👈 this makes it gentle
+    });
   }, []);
 
   return (
