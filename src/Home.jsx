@@ -4,7 +4,7 @@ import Footer from './component/Footer';
 import Webcam from 'react-webcam';
 import { Link, useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCamera, faChartBar, faClipboardCheck } from '@fortawesome/free-solid-svg-icons';
+import { faCamera, faChartBar, faClipboardCheck, faFileMedical, faMicroscope } from '@fortawesome/free-solid-svg-icons';
 
 const Home = () => {
   
@@ -44,12 +44,16 @@ const Home = () => {
                 Real-time wound analysis and professional guidance for better healing outcomes
               </p>
               <div className="flex gap-4 justify-center flex-wrap">
-                <button className="btn btn-lg btn-outline text-base-100 border-base-100 hover:bg-base-100 hover:text-primary">
-                  Get Started
-                </button>
-                <button className="btn btn-lg btn-ghost text-base-100 hover:bg-base-100/20">
-                  Learn More
-                </button>
+                <Link to={"/Capture"}>
+                  <button className="btn btn-lg btn-outline text-base-100 border-base-100 hover:bg-base-100 hover:text-primary">
+                    Get Started
+                  </button>
+                </Link>
+                <Link to={"/About"}>
+                  <button className="btn btn-lg btn-ghost text-base-100 hover:bg-base-100/20">
+                    Learn More
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -68,7 +72,7 @@ const Home = () => {
             </div>
 
             {/* Three Card Grid */}
-            <div className="grid md:grid-cols-2 gap-8 mb-16">
+            <div className="grid md:grid-cols-3 gap-8 mb-16">
               {/* Card 1: Patient - Take Picture */}
               <div className={`transition-all duration-700 ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
@@ -120,7 +124,7 @@ const Home = () => {
                     <div className="card-actions justify-center mt-6">
                       <Link to={"/Analyze"}>
                         <button className="btn btn-secondary btn-wide gap-2">
-                          <i className="fas fa-microscope"></i>
+                          <FontAwesomeIcon icon={faMicroscope}/>
                           Analyze Wound
                         </button>
                       </Link>
@@ -130,7 +134,7 @@ const Home = () => {
               </div>
 
               {/* Card 3: Professional Solutions */}
-              {/* <div className={`transition-all duration-700 ${
+              <div className={`transition-all duration-700 ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`} style={{ transitionDelay: '600ms' }}>
                 <div className="card bg-base-200 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 h-full">
@@ -141,20 +145,22 @@ const Home = () => {
                       </div>
                     </div>
                     
-                    <h3 className="card-title text-2xl justify-center">Professional Solutions</h3>
+                    <h3 className="card-title text-2xl justify-center">Review Analysis</h3>
                     <p className="text-base-content/70">
-                      Healthcare professionals receive detailed insights and can provide tailored treatment recommendations, medication guidance, and follow-up protocols.
+                      Knowledge is key to a fast recovery. Access your detailed wound evaluation and step-by-step treatment guide right here.
                     </p>
                     
                     <div className="card-actions justify-center mt-6">
-                      <button className="btn btn-accent btn-wide gap-2">
-                        <i className="fas fa-file-medical"></i>
-                        Provide Solution
-                      </button>
+                      <Link to={"/Review"}>
+                        <button className="btn btn-accent btn-wide gap-2">
+                          <FontAwesomeIcon icon={faFileMedical}/>
+                          Review Analysis
+                        </button>
+                      </Link>
                     </div>
                   </div>
                 </div>
-              </div> */}
+              </div>
             </div>
 
             {/* Features Section */}
